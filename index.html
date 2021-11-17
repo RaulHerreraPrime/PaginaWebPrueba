@@ -4,76 +4,128 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo_pagina</title>
-</head>
-<body background="./img/prim.jpg">
-    <center>
-        <font>
-            Label de ejemplo
-        </font>
-    </center>
-    <center>
-        <img src="./img/mag.jpg" height="700px">
-    </center>
-    <center>
-        <table border ="0" cellpadding= "10">
-            <tr>
-                <td colspan="4">
-                    <center>
-                        <font style="font-size: 50">
-                            Tabla 
+    <title>Equipo 4.0</title>
+    <!--Icono-->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <!--Font owswel-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <!--Custom CSS (mio)-->
+    <link rel="stylesheet" href="styles.css">
+    <!--Firbase-->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
 
-                        </font>
-                    </center>
-                </td>
-            </tr>
-            <tr>
-                    <td>
-                        <img src="/img/arc.jpg" height="200px" >
-                    </td>
-                    <td>
-                        <img src="/img/clif.jpg" height="200px">
-                    </td>
-                    <td>
-                        <img src="/img/rat.jpg" height="200px">
-                    </td>
-                    <td>
-                        <img src="/img/smoc.jpg" height="200px">
-                    </td>
-            </tr>
-            <tr>
-                <td colspan="4">
-                    <center>
-                        <font style="font-size: 50">
-                            Misma tabla, subtitulo
-                        </font>
-                    </center>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/img/arc.jpg" height="200px" >
-                </td>
-                <td>
-                    <img src="/img/clif.jpg" height="200px">
-                </td>
-                <td>
-                    <img src="/img/rat.jpg" height="200px">
-                </td>
-                <td>
-                    <img src="/img/smoc.jpg" height="200px">
-                </td>
-        </tr>
-        </table>
-    </center>
-    <center>
-        <a href="segunda.html" target="_parent">
-            <button style="background-color: #F2132E">
-                <font face="Times New Roman">
-                    Cambio de pagina
-                </font>
-            </button>
-        </a>
-    </center>
+</head>
+<body>
+    <div class="menu-btn">
+        <i class="fas fa.bars"></i>
+    </div>
+    <div class="container">
+        <nav class="nav-main">
+            <img src="/img/logo.png" alt="TechNews logo" class="nav-brand">
+            <ul class="nav-menu">
+                <h1>Equipo 4.0</h1>
+            </ul>
+            <ul class="nav-menu-right">
+                <li>
+                    <a href="https://www.google.com.mx/">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+        <!--NEW CARDS-->
+        <div class="news-cards">
+            <div>
+                <img src="/img/Marty.jpeg"alt="participante 1">
+                <h3>Martin Fernández Delgado</h3>
+                <p>Estudiante de ingenieria mecatrónica en el Instituto Tecnológico de Celaya.</p>
+                
+            </div>
+            <div>
+                <img src="/img/Pablo.jpg"alt="participante 2">
+                <h3>Pablo Soto Arroyo</h3>
+                <p>Estudiante de ingenieria mecatrónica en el Instituto Tecnológico de Celaya.</p>
+            </div>
+            <div>
+                <img src="/img/armando.jpg"alt="participante 3">
+                <h3>Armando Figueroa Martínez</h3>
+                <p>Estudiante de ingenieria mecatrónica en el Instituto Tecnológico de Celaya.</p>
+            </div>
+            <div>
+                <img src="/img/Raul.jpg"alt="participante 4">
+                <h3>Herrera Arroyo Raul Omar</h3>
+                <p>Estudiante de ingenieria mecatrónica en el Instituto Tecnológico de Celaya.</p>
+            </div>
+        </div>
+        <!--Sensores-->
+        <div class="Sensores">
+            <center>
+                <table border="0" cellpading="10" id="tabla">
+                    <tr>
+                        <td colspan="3">
+                            <center>
+                                <p>Estado de los sensores:</p>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
+                                <p>Sensor A:</p>
+                            </center>
+                        </td>
+                        <td>
+                            <p class="espacio"></p> 
+                        </td>
+                        <td>
+                            <center>
+                                <p>Sensor B:</p>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
+                                <img id=img1 src="/img/derecha.png" alt="SENSORA">
+                            </center>
+                        </td>
+                        <td>
+                            <p id="espacio"></p>
+                        </td>
+                        <td>
+                            <center>
+                                <img id=img2 src="/img/izquierda.png" alt="SENSORB">
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        <section class="social">
+            <p>Follow us!</p>
+            <div class="links">
+                <a href="https://www.facebook.com">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/home">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </section>
+    </div>  
+    <footer class="footer">
+       <h3>Copyright 2020-2030</h3> 
+    </footer>
+    <!--Javascrip-->
+    <script src="main.js"></script>
 </body>
 </html>
