@@ -16,7 +16,7 @@ firebase.initializeApp(firebaseConfig);
 //Variables
 var img1 = document.getElementById('img1');
 var img2 = document.getElementById('img2');
-var images = ["/img/derecha.png","/img/izquierda.png"];
+
 
 //conexion con Firebase
 var firebaseSENSORA =firebase.database().ref("ejemploiot-44b6e-default-rtdb/SENSORES/SENSORA");
@@ -26,19 +26,19 @@ firebaseSENSORA.on("value",function(snapshot){
     var SENSORA = snapshot.val();
     var direccion;
     if(SENSORA=="DERECHA"){
-        img1.src="/img/derecha.png";
+        img1.src="img/derecha.png";
     }
     else{
-        img1.src="/img/izquierda.png";
+        img1.src="img/izquierda.png";
     }
 });
 
 firebaseSENSORB.on("value",function(snapshot){
     var SENSORB = snapshot.val();
     if(SENSORB=="DERECHA"){
-        img2.src="/img/derecha.png";
+        img2.src="img/derecha.png";
     }
     else{
-        img2.src="/img/izquierda.png";
+        img2.src="img/izquierda.png";
     }
 });
